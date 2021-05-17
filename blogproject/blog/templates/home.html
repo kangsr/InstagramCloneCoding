@@ -12,14 +12,12 @@
 <body>
     <h1>Blog Project</h1>
     <div class="container">
-    {% for blog in bolgs%}
-        </div>
+    {% for blog in blogs %}
         <h3>{{blog.title}}</h3>
         {{blog.id}}
         {{blog.writer}}
         {{blog.summary}} <a href = "{%url 'detail1' blog.id %}">...more</a>
         <br>
-        </div>
     {% endfor %}
     </div>
 </body>
