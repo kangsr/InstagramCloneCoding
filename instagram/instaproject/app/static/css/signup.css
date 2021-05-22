@@ -1,0 +1,68 @@
+#container{
+border-style: solid;
+border-width: thin thin thin thin;
+
+
+flex-direction: column;
+align-content: center;
+width: 500px;
+height: 600px;
+}
+
+
+
+#line3,#line4,#line5,#line6,#signUpButton{
+    height: 20px;
+    width: 400px;
+    padding-bottom: 20px;
+    margin-left: 40px;
+    margin-bottom: 15px;
+    
+}
+#line3{
+    margin-top: 100px;
+}
+#line1{
+    font-size: 20px;
+    text-align: center;
+}
+#title{
+    margin-left: 150px;
+    margin-top:50px;
+    
+}
+
+#login{
+    border-style: solid;
+    border-width: thin thin thin thin;
+    width: 500px;
+    height: 80px;
+    margin-top: 30px;
+    
+    
+}
+#textlogin{
+    color: skyblue;
+    margin-left: 30px;
+    
+}
+#question{
+    margin-left: 100px;
+}
+
+body{
+    background-color: rgb(235, 235, 235);
+}
+
+.signUp_container, .joinInsta{
+    background-color: white;
+    margin-left: 40%;
+    margin-top: 20%;
+}
+.joinInsta{
+    text-align: center;
+}
+
+.join{
+    text-align: center;
+}
