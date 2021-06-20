@@ -1,0 +1,51 @@
+.main{
+    background-color: white;
+    width: 30rem;
+    height: 45rem;
+    margin-left: 40%;
+    margin-top: 10%;
+
+}
+
+.userNickName{
+    background-color: white;
+    height: 3rem;
+    text-align: left;
+    font-weight: bold;
+    line-height: 300%;
+    margin-left: 2rem;
+
+}
+
+.cardImage img{
+    width: 30rem;
+    height: 30rem;
+}
+
+.infoLeft{
+    float: left;
+}
+
+.infoRight{
+    float: right;
+}
+
+.comment{
+    margin-top: 4rem;
+}
+
+.comment_from{
+    
+    width: 30rem;
+    height: 5rem;
+}
+
+body{
+    background-color: rgb(235, 235, 235);
+}
+
+#input_text{
+    width: 29.5rem;
+    margin-top: 4rem;
+    height: 1.5rem;
+}

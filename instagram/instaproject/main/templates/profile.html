@@ -1,0 +1,67 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "UTF-8" >
+    <title>프로필</title>
+    {% load static %}
+<link href = "{% static 'css/profile.css' %}" rel = "stylesheet" type = "text/css" />
+<link rel="icon" href="{% static 'img/icon.png' %}">
+</head>
+
+<body>
+    <header>
+        <div >
+            <button id="button"><img id="pic1" src = "{% static 'img/ssu_likelion_logo_150x150.png' %}" alt = "프로필사진" ></button>
+        </div>
+        <div>
+            <h1 class="profileUserName">{{author.username}}</h1>
+        </div>
+        <div>
+            {% if user.id == author.id %}
+                <button id="editpf">프로필 편집</button>
+            {% endif %}
+        </div>
+        <div>
+            <ul class="info">
+                <li>000 게시물</li>
+                <li>000 팔로워</li>
+                <li>000 팔로잉</li>
+            </ul>
+        </div>
+        <div>
+            <p id="hello">hello world</p>
+        </div>
+    </header>
+
+    <main>
+        <div>
+            <ul class="post1">
+
+                {% for feed in feeds %}
+
+                    <li>
+                        <img src="{{feed.image.url}}" alt = "이미지">
+                        <div class = "caption">
+                            <p>Likes: 0</p>
+                            <p>Comments: 0</p>
+                        </div>
+                    </li>
+                {% endfor %}
+               
+            </ul>
+        
+        
+        </div>
+        
+        
+    </main>
+
+</body>
+
+    
+{% endblock %}

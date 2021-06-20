@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "UTF-8">
+    <title>Instagram</title>
+    {% load static %}
+<link href = "{% static 'css/feed.css' %}" rel = "stylesheet" type = "text/css" />
+<link rel = "icon" href = "{% static 'img/icon.png' %}" >
+</head>
+
+<body>
+    
+    <div class = "main">
+        <section class = "cardViewSection" >
+            <div class = "cardView">
+                <header>
+                    <div class = "userNickName">LikeLionSSU</div>
+                </header>
+                <div class = "cardImage">
+                    <img src = "{{feed.image.url}}" alt = "sample" >
+                </div>
+
+
+                <div class = "cardInfo" >
+                    <div class = "infoLeft" >
+                        <img class = "feedImg" src = "{% static 'img/liked.png' %}" alt = "좋아용" />
+                        <img class = "feedImg" src = "{% static 'img/comment.png' %}" alt = "코멘트" />
+                        <img class = "feedImg" src = "{% static 'img/upload.png' %}" alt = "업로드" />
+                    </div>
+                    <div class = "infoRight">
+                        <a href="{% url 'edit' feed.id %}"><img class = "feedImg" src = "{% static 'img/edit.png' %}" alt = "수정" /></a>
+                        <a href="{% url 'delete' feed.id %}"><img class = "feedImg" src = "{% static 'img/delete.png' %}" alt = "삭제" /></a>
+                    </div>
+                </div>
+                <div class = "comment">
+                    {{feed.pub_date}}<br>
+                    {{feed.summary}}<br>
+                </div>
+                <div class = "comment_form" >
+                    <form action = "" >
+                        <input type = "text" placeholder = "댓글 입력.." id="input_text">
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+</body>
+{% endblock %}

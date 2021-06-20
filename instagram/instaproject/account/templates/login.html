@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+{% load static %}
+<meta charset = "UTF-8" >
+<title>Instagram</title>
+<link href = "{% static 'login.css' %}" rel = "stylesheet" type = "text/css" />
+<link href = "{% static 'css/background.css' %}" rel = "stylesheet" type = "text/css" />
+<link rel = "icon.css"href = "{% static 'img/icon.png' %}" >
+
+<link rel = "stylesheet" href = "{% static 'css/login.css' %}"> 
+</head>
+
+<body>
+    <form method="POST" action="{% url 'login' %}">
+    {% csrf_token %}
+    <div id = "container" class = "login_container" >
+        <div><img id = "title" class = "InstagramText" src = "{% static 'img/logo_text.png' %}" alt = "InstagramText"></div>
+        <div><input name="username" value=""id = "box1" type = "text" class = "userLogin" placeholder="전화번호, 사용자 이름 또는 이메일 "></div>
+        <div><input name="password" value=""id = "box2" type="password" class="userLogin" placeholder="비밀번호"></div>
+        <div><input id = "loginButton" type="submit" value="로그인"></div>
+    </div>
+
+    <div>
+        <footer id="join" class="joinInsta">
+            <p class="join">계정이 없으신가요? <a class="joinBtn" href="{% url 'signup' %}">가입하기</p>
+        </footer>
+    </div>
+
+    </form>
+</body>
+</html>
+
+{% endblock %}

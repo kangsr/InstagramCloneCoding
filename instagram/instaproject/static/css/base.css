@@ -1,0 +1,13 @@
+.favicon_frame,.line{
+    float: left;
+    margin-right: 30px;
+}
+
+.heart_box, .myInfo_box{
+    float: right;
+    margin-left: 30px;
+}
+.left_box, .right_box{
+    margin-bottom: 300px;
+}
+
